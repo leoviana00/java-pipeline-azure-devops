@@ -1,5 +1,5 @@
 apiVersion: v2
 name: rest-calculator-java
 description: A Helm chart for Java Kubernetes
-version: v0.3.0
-appVersion: "1.16.0"
+version: $(build.buildId)
+
