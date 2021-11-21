@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: inframateus.azurecr.io/rest-calculator-java:master
+  repository: inframateus.azurecr.io/rest-calculator-java
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
