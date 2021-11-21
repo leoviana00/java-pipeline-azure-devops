@@ -11,7 +11,7 @@ Para executar a calculadora digite na raiz do projeto o comando abaixo:
 windows: *./mvnw spring-boot:run*
 linux: *mvn spring-boot:run*
 
-## Testando a calculadora
+## Testando a calculadora 
 
 #soma *http://localhost:8080/calculadora/soma/?numero=1&numero2=4*
 #subtracao *http://localhost:8080/calculadora/subtracao/?numero=1&numero2=4*
