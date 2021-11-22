@@ -25,7 +25,7 @@ variables:
       dockerfile: 'Dockerfile'
       buildContext: '$(Build.SourcesDirectory)'
 
-steps:
+jobs:
+  steps:
   - template: templates/java/ci-steps-template.yml@templates
-  
- 
+    displayName: ${{ parameters.projectName }} - CI - $(build.buildId)
