@@ -28,7 +28,7 @@ variables:
   - group: acr
   - template: templates/java/ci-vars-template.yml@templates
     parameters:
-      projectName: rest-calculator-java
+      projectName: java-pipeline-azure-devops
       dockerRegistryServiceConnectionName: acr-connection-aks
       dockerfile: 'Dockerfile'
       buildContext: '$(Build.SourcesDirectory)'
