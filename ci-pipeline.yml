@@ -35,9 +35,7 @@ variables:
 
 steps:
 - checkout: helmrepo
-- bash: |
-      ls $(Build.SourcesDirectory)
-- checkout: helmrepo     
+- checkout: self   
 - template: templates/java/ci-steps-template.yml@templates
   
 
