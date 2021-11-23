@@ -32,7 +32,7 @@ variables:
       dockerRegistryServiceConnectionName: acr-connection-aks
       dockerfile: '$(projectName)/Dockerfile'
       buildContext: '$(Build.SourcesDirectory)'
-      chartHelmFile: '$(projectName)/azure-java-templates-helm-chart'
+      chartHelmFile: 'azure-template-helm-chart/templates/java'
 
 steps: 
   - checkout: self
