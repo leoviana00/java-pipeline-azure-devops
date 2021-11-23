@@ -35,10 +35,10 @@ variables:
   value: gmsocial
 
 stages:
-- stage: development
-  displayName: development
+- stage: dev
+  displayName: dev
   jobs:
-  - deployment: development
+  - deployment: dev
     variables:
       group: aks-variable-group
       k8sNamespace: 'gmservice'
