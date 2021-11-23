@@ -35,6 +35,7 @@ variables:
 
 steps:  
   - template: templates/java/ci-steps-template.yml@templates
+  - checkout: helmrepo
   
 
   
