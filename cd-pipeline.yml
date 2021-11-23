@@ -24,13 +24,13 @@ resources:
         enabled: true
         branches:
           include:
-            - '*'
+            - master
 
 variables:
-- group: acr
+- group: acr-variable-group
 - template: templates/java/cd-vars-template.yml@templates
   parameters:
-      projectName: dotnet-pipeline-azure-devops  
+      projectName: java-pipeline-azure-devops
 - name: k8sNamespace
   value: gmsocial
 
@@ -40,7 +40,8 @@ stages:
   jobs:
   - deployment: development
     variables:
-      k8sNamespace: 'gmservice'
+      - group: aks-variable-group
+      - k8sNamespace: 'gmservice'
       # define 5 more variables: aks, rg, aksSpId, aksSpSecret and aksSpTenantId in the Azure pipeline UI definition
     displayName: deploy helm chart into AKS
     pool:

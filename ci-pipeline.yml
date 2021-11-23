@@ -25,7 +25,7 @@ resources:
       endpoint: 'leoviana00'
 
 variables:
-  - group: acr
+  - group: acr-variable-group
   - template: templates/java/ci-vars-template.yml@templates
     parameters:
       projectName: java-pipeline-azure-devops
