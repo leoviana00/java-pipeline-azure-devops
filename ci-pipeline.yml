@@ -33,9 +33,11 @@ variables:
       dockerfile: 'Dockerfile'
       buildContext: '$(Build.SourcesDirectory)'
 
-steps:  
+steps: 
+  - checkout: self
+  - checkout: helmrepo 
   - template: templates/java/ci-steps-template.yml@templates
-  - checkout: helmrepo
+  
   
 
   
