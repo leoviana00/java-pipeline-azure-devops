@@ -21,7 +21,7 @@ resources:
     - repository: helmrepo
       type: github
       name: leoviana00/azure-template-helm-chart
-      ref: 'refs/heads/main'
+      ref: 'refs/heads/master'
       endpoint: 'leoviana00'
 
 variables:
