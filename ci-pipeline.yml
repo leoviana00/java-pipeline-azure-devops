@@ -34,10 +34,14 @@ variables:
       buildContext: '$(Build.SourcesDirectory)'
 
 steps:
+- checkout: helmrepo
+- bash: |
+      ls $(Build.SourcesDirectory)
+      
   - template: templates/java/ci-steps-template.yml@templates
-  - checkout: helmrepo
+  
 
-  - script: dir $(Build.SourcesDirectory)
+  
     
   
  
