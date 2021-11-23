@@ -30,7 +30,7 @@ variables:
     parameters:
       projectName: java-pipeline-azure-devops
       dockerRegistryServiceConnectionName: acr-connection-aks
-      dockerfile: 'Dockerfile'
+      dockerfile: '$(projectName)/Dockerfile'
       buildContext: '$(Build.SourcesDirectory)'
 
 steps: 
