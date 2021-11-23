@@ -40,8 +40,8 @@ stages:
   jobs:
   - deployment: dev
     variables:
-      group: aks-variable-group
-      k8sNamespace: 'gmservice'
+    - group: aks-variable-group
+    - k8sNamespace: 'gmservice'
       # define 5 more variables: aks, rg, aksSpId, aksSpSecret and aksSpTenantId in the Azure pipeline UI definition
     displayName: deploy helm chart into AKS
     pool:
