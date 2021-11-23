@@ -32,10 +32,12 @@ variables:
       dockerRegistryServiceConnectionName: acr-connection-aks
       dockerfile: 'Dockerfile'
       buildContext: '$(Build.SourcesDirectory)'
-      chartPath: 'azure-java-templates-helm-chart/'
 
 steps:
   - template: templates/java/ci-steps-template.yml@templates
+  - checkout: helmrepo
+
+  - script: dir $(Build.SourcesDirectory)
     
   
  
