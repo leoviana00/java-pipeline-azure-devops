@@ -50,4 +50,4 @@ stages:
       runOnce:
         deploy:
           steps:
-          - template: templates/dotnet/cd-steps-template.yml@templates
+          - template: templates/java/cd-steps-template.yml@templates
