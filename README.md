@@ -2,6 +2,7 @@
 Uma calculadora simples exposta como Rest API, feita em Java 11 usando Spring Boot.
 
 ## Requisitos
+
 - Java 11 JDK. link: https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html 
 - apache-maven-3.6.1, link: https://maven.apache.org/download.cgi
 
