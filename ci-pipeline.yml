@@ -27,7 +27,6 @@ resources:
 variables:
   - group: acr-variable-group
   - template: templates/java/ci-vars-template.yml@templates
-  - template: templates/java/chart-vars.yaml@helmrepo
     parameters:
       projectName: java-pipeline-azure-devops
       dockerRegistryServiceConnectionName: acr-connection-aks
