@@ -32,7 +32,7 @@ variables:
   parameters:
       projectName: java-pipeline-azure-devops
 - name: k8sNamespace
-  value: gmsocial-java
+  value: gmsocial
 
 stages:
 - stage: dev
