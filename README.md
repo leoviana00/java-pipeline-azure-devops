@@ -8,7 +8,7 @@ Uma calculadora simples exposta como Rest API, feita em Java 11 usando Spring Bo
 - apache-maven-3.6.1, link: https://maven.apache.org/download.cgi
 
 ## Executar
-
+ 
 Para executar a calculadora digite na raiz do projeto o comando abaixo:
 
 windows: *./mvnw spring-boot:run*
