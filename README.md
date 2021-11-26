@@ -1,4 +1,5 @@
 # Calculadora simnples
+
 Uma calculadora simples exposta como Rest API, feita em Java 11 usando Spring Boot.
 
 ## Requisitos
