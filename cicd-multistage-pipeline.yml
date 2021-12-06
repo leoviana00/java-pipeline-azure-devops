@@ -1,0 +1,43 @@
+resources:
+  repositories:
+    # Adicionando repositório de templates base para o processo de cicd
+    - repository: templates
+      type: github
+      name: leoviana00/azure-templates-pipeline
+      ref: 'refs/heads/main'
+      endpoint: 'leoviana00'
+
+    # Adicionando repositório de templates base para helm charts
+    - repository: helmrepo
+      type: github
+      name: leoviana00/azure-template-helm-chart
+      ref: 'refs/heads/master'
+      endpoint: 'leoviana00'
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - releases/*
+      - staging
+      - dev
+
+pr: none
+
+pool:
+  vmImage: ubuntu-latest 
+
+variables:
+  - group: acr-variable-group
+  - template: templates/multistage/java/cicd-vars-pipeline.yml@templates
+    parameters:
+        projectName: java-pipeline-azure-devops
+        dockerRegistryServiceConnectionName: acr-connection-aks
+        dockerfile: '$(projectName)/Dockerfile'
+        buildContext: '$(Build.SourcesDirectory)'
+        chartHelmFile: 'azure-template-helm-chart/templates/java/$(projectName)'
+  - name: k8sNamespace
+    value: gmservice-multistage
+
+stages:
+- template: templates/multistage/java/cicd-stages-pipeline.yml@templates
