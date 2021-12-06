@@ -41,3 +41,4 @@ variables:
 
 stages:
 - template: templates/multistage/java/cicd-stages-pipeline.yml@templates
+
